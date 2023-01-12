@@ -1,0 +1,23 @@
+version: '3.7'  
+services:
+  db:
+    image: mysql:5.7
+    restart: on-failure
+    ports: 
+        - "3306:3306"
+    environment:
+        MYSQL_DATABASE: 'vitrina_db'
+        # MYSQL_ALLOW_EMPTY_PASSWORD: 1
+        MYSQL_ROOT_PASSWORD: "123"
+        # Log in: db, root, 123
+    volumes:
+        - ./dbfiles:/var/lib/mysql
+  app:
+    build:
+        context: .
+        dockerfile: docker/Dockerfile
+    image: 'vitrina'
+    ports:
+        - 8080:80
+    volumes:
+        - ./:/var/www/html
