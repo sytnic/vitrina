@@ -15,5 +15,5 @@ yarn-error.log
 /.vscode
 
 /storage
-/bootstrap/cache
+# /bootstrap/cache
 /dbfiles
