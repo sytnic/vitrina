@@ -25,4 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('users/export/', [App\Http\Controllers\UsersController::class, 'export']);
 
 // Import works. Excel file must be in /public in default.
-Route::get('users/import/', [App\Http\Controllers\UsersController::class, 'import']);
+//Route::get('users/import/', [App\Http\Controllers\UsersController::class, 'import']);
+
+Route::post('users/import/', [App\Http\Controllers\UsersController::class, 'import'])->name('import');

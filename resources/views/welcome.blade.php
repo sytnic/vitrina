@@ -98,6 +98,12 @@
                                 </div>
                             </div>
                         </div>
+
+                        @if (session('msg'))
+                            <div class="alert alert-warning" role="alert">
+                                {{ session('msg') }}
+                            </div>
+                        @endif   
                     </div>
                 </div>
 
