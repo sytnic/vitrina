@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Export works.
+// Route::get('users/export/', [App\Http\Controllers\UsersController::class, 'export']);
