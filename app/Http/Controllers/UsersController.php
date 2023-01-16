@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exports\UsersExport;
 use App\Imports\UsersImport;
+use App\Imports\UsersImportCollect;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 // use App\Models\User;
@@ -34,5 +35,16 @@ class UsersController extends Controller
         }
         
     }
+
+    public function importUsersCollect(Request $request) 
+    {
+        if (!empty($request->file)) {
+            Excel::import(new UsersImportCollect, request()->file('file'));
+            return redirect('/usersimport')->with('success', 'Файл загружен!');
+        } else {
+            return back()->with(['msg' => 'Файл не выбран.']);
+        }
+    }
+
 }
 

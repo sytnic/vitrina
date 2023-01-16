@@ -23,7 +23,7 @@
                 <p>Technical menu:</p>
                 <a class="" href="/usersimport">Users-Import</a>
                 <br>
-                <a class="" href="##">Link</a>
+                
             </div>  
 
             <hr>

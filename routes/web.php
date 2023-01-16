@@ -27,7 +27,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Import works. Excel file must be in /public in default.
 //Route::get('users/import/', [App\Http\Controllers\UsersController::class, 'import']);
 
+// ToModel
 Route::post('users/import/', [App\Http\Controllers\UsersController::class, 'importUsers'])->name('importUsers');
+// ToCollection
+Route::post('users/importcollect/', [App\Http\Controllers\UsersController::class, 'importUsersCollect'])->name('importUsersCollect');
 
 Route::get('/techadmin', function () {
     return view('techadmin');

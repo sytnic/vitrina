@@ -20,18 +20,29 @@
                     <a class="" href="/usersimport">Обновить страницу</a>
                 </div>
             </div>
-<br>
+<hr>
             <div class="mb-3">
                 <form action="{{ route('importUsers') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                <label for="formFile" class="form-label">Выбрать и загрузить файл</label>
+                <label for="formFile" class="form-label">Выбрать и загрузить файл по importUsers (ToModel)</label>
                 <input class="form-control" type="file" name="file" id="formFile">
                 <button type="submit" name="submit" class="btn btn-primary btn-block mt-4">
                     Загрузить файл
                 </button>
                 </form>
             </div>
-
+<hr>
+            <div class="mb-3">
+                <form action="{{ route('importUsersCollect') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                <label for="formFile" class="form-label">Выбрать и загрузить файл по importUsersCollect (ToCollection)</label>
+                <input class="form-control" type="file" name="file" id="formFile">
+                <button type="submit" name="submit" class="btn btn-primary btn-block mt-4">
+                    Загрузить файл
+                </button>
+                </form>
+            </div>
+<hr>
             @if (session('success'))
                 <div class="alert alert-success" role="alert">
                     {{ session('success') }}
@@ -44,7 +55,7 @@
                 </div>
             @endif  
 
-<br>
+<hr>
             <div class="mb-3 text-muted">
                 <p>Отобразить файл в виде:</p>
                 <a class="text-muted" href="##">Таблица</a>
@@ -52,7 +63,7 @@
                 <a class="text-muted" href="##">Витрина</a>
             </div>  
 
-            <hr>
+<hr>
             <div class="mb-3">
                 <a class="text-muted" href="/techadmin">Tech.Admin Menu</a>
             </div> 
