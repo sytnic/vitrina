@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{-- __('Dashboard') --}} Tech.Admin. Users Import</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -17,7 +17,7 @@
 
                     {{-- __('You are logged in!') --}}
 
-                    <a class="" href="/home">Обновить страницу</a>
+                    <a class="" href="/usersimport">Обновить страницу</a>
                 </div>
             </div>
 <br>
@@ -45,11 +45,11 @@
             @endif  
 
 <br>
-            <div class="mb-3">
+            <div class="mb-3 text-muted">
                 <p>Отобразить файл в виде:</p>
-                <a class="" href="##">Таблица</a>
+                <a class="text-muted" href="##">Таблица</a>
                 &nbsp;&nbsp;&nbsp;
-                <a class="" href="##">Витрина</a>
+                <a class="text-muted" href="##">Витрина</a>
             </div>  
 
             <hr>

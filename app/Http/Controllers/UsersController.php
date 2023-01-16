@@ -15,7 +15,7 @@ class UsersController extends Controller
         return Excel::download(new UsersExport, 'users.xlsx');
     }
 
-    public function import(Request $request) 
+    public function importUsers(Request $request) 
     {
         // It works.
         // Excelfile in default must be in /public
@@ -28,7 +28,7 @@ class UsersController extends Controller
         // Html-form must have field 'name="file"'
         if (!empty($request->file)) {
             Excel::import(new UsersImport, request()->file('file'));
-            return redirect('/home')->with('success', 'Файл загружен!');
+            return redirect('/usersimport')->with('success', 'Файл загружен!');
         } else {
             return back()->with(['msg' => 'Файл не выбран.']);
         }
