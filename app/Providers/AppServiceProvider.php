@@ -24,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Видимо, нужно только для создания индексов в бд
+        // https://laravel.com/docs/8.x/migrations#index-lengths-mysql-mariadb
         Schema::defaultStringLength(191);
     }
 }
