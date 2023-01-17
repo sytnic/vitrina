@@ -34,8 +34,12 @@ Route::post('users/importcollect/', [App\Http\Controllers\UsersController::class
 
 Route::get('/techadmin', function () {
     return view('techadmin');
-});
+})->middleware('auth');
 
 Route::get('/usersimport', function () {
     return view('usersimport');
-});
+})->middleware('auth');
+
+Route::get('/products/import', function () {
+    return view('admin.products_import');
+})->middleware('auth');
