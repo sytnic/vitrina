@@ -20,7 +20,7 @@
             </div>
 <br>
             <div class="mb-3">
-                <p>Admin Menu:</p>
+                <h3>Manage Menu</h3>
                 <a class="" href="/products/import">Products Import</a>
                 <br>
             </div>  

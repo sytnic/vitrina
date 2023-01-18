@@ -41,5 +41,8 @@ Route::get('/usersimport', function () {
 })->middleware('auth');
 
 Route::get('/products/import', function () {
-    return view('admin.products_import');
+    return view('manage.products_import');
 })->middleware('auth');
+
+// ToCollection
+Route::post('/productsimport', [App\Http\Controllers\ProductsController::class, 'importProducts'])->name('importProducts');
