@@ -20,7 +20,7 @@
             </div>
 <br>
             <div class="mb-3">
-                <h3>Manage Menu</h3>
+                <h3>Home Menu</h3>
                 <p>Импортировать файл в базу данных <br>
                   <a class="" href="/products/import">Products Import</a>
                 </p>

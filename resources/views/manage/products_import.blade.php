@@ -47,10 +47,10 @@
 
 <br>
             <div class="mb-3">
-                <p>Отобразить файл в виде:</p>
-                <a class="" href="##">Таблица</a>
+                <p>Перейти к отображению в виде:</p>
+                <a class="" href="/products/table">Таблица</a>
                 &nbsp;&nbsp;&nbsp;
-                <a class="" href="##">Витрина</a>
+                <a class="text-muted" href="##">Витрина</a>
             </div>  
 
             <hr>

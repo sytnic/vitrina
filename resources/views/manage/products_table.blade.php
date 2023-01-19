@@ -23,7 +23,7 @@
                 <th scope="col">datetime</th>
                 <th scope="col">tochka</th>
 
-                <th class="Actions">Actions</th>
+                <th class="">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -81,13 +81,13 @@
                 <td>{{ date('d F Y', strtotime($product->datetime)) }}</td>
                 <td>{{ $product->tochka }}</td>
 
-                <td class="actions">
+                <td class="">
                     <a  href="##{{-- action('BookingController@show', ['booking' => $booking->id]) --}}"
                         alt="View"
                         title="View">
                       View</a>
-                    &nbsp;
-                    <a  href="##{{-- action('BookingController@edit', ['booking' => $booking->id]) --}}"
+                    <a  
+                        href="##{{-- action('BookingController@edit', ['booking' => $booking->id]) --}}"
                         alt="Edit"
                         title="Edit">
                       Edit</a>
@@ -106,7 +106,7 @@
             </tbody>
         </table>    
         <!-- Pagination -->        
-        {{-- $products->links() --}}
+        {{ $products->links() }}
         </div>
     </div>
 </div>

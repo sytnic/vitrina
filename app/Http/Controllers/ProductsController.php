@@ -9,6 +9,18 @@ use Illuminate\Support\Facades\DB;
 class ProductsController extends Controller
 {
     /**
+     * Запрет без авторизации )) , man
+     * 
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -29,14 +41,25 @@ class ProductsController extends Controller
         // $bookings = Product::all()->dd();
 
         // Все
-         $products = Product::all();
+        // $products = Product::all();
 
         // С пагинацией
-        //$products = Product::paginate(20);
+        $products = Product::paginate(20);
 
+        // вью с with
         return view('manage.products_table') 
             ->with('products', $products)
+            // ->with('another', $another)
             ;
+        
+        /* // вью с массивом
+        return view('manage.products_table', 
+            [            
+             'products' => $products,
+             // 'another' => $another,
+            ]
+        );
+        */
     }
 
     /**

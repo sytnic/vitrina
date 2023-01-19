@@ -48,9 +48,11 @@ Route::get('/products/import', function () {
 // ToCollection
 Route::post('/productsimport', [App\Http\Controllers\ProductsImportController::class, 'importProducts'])->name('importProducts');
 
+/* to delete this
 Route::get('/products/table', function () {
     return view('manage.products_table');
 })->middleware('auth');
+*/
 
 // https://laravel.demiart.ru/target-class-does-not-exist-in-laravel-8/
 // Route::get('/products/table', 'ProductsController@table')->name('tableProducts');
