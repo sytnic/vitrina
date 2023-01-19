@@ -83,11 +83,13 @@
 
                 <td class="">
                     <a  href="##{{-- action('BookingController@show', ['booking' => $booking->id]) --}}"
+                        class="text-muted"
                         alt="View"
                         title="View">
                       View</a>
                     <a  
                         href="##{{-- action('BookingController@edit', ['booking' => $booking->id]) --}}"
+                        class="text-muted"
                         alt="Edit"
                         title="Edit">
                       Edit</a>
