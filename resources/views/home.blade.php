@@ -21,8 +21,13 @@
 <br>
             <div class="mb-3">
                 <h3>Manage Menu</h3>
-                <a class="" href="/products/import">Products Import</a>
-                <br>
+                <p>Импортировать файл в базу данных <br>
+                  <a class="" href="/products/import">Products Import</a>
+                </p>
+                
+                <p>Отобразить товары в виде таблицы <br>
+                  <a class="" href="/products/table">Products Table</a>
+                </p>
             </div>  
 
             <hr>

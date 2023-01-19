@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,5 +28,8 @@ class AppServiceProvider extends ServiceProvider
         // Видимо, нужно только для создания индексов в бд
         // https://laravel.com/docs/8.x/migrations#index-lengths-mysql-mariadb
         Schema::defaultStringLength(191);
+
+        // Pagination
+        Paginator::useBootstrap();
     }
 }

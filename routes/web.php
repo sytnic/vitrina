@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,13 @@ Route::get('/products/import', function () {
 })->middleware('auth');
 
 // ToCollection
-Route::post('/productsimport', [App\Http\Controllers\ProductsController::class, 'importProducts'])->name('importProducts');
+Route::post('/productsimport', [App\Http\Controllers\ProductsImportController::class, 'importProducts'])->name('importProducts');
+
+Route::get('/products/table', function () {
+    return view('manage.products_table');
+})->middleware('auth');
+
+// https://laravel.demiart.ru/target-class-does-not-exist-in-laravel-8/
+// Route::get('/products/table', 'ProductsController@table')->name('tableProducts');
+Route::get('/products/table', [ProductsController::class, 'table'])->name('tableProducts');
+

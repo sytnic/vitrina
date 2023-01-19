@@ -1,4 +1,4 @@
-## Created outside of code
+## Beyond the code
 
 https://docs.laravel-excel.com/3.1/imports/
 
@@ -19,8 +19,8 @@ https://laravel.su/docs/8.x/migrations#rolling-back-migrations
 Откатить последнюю миграцию
 
     php artisan migrate:rollback --step=1
-    // Work method down():
-    // Schema::dropIfExists('table')
+    // Method down() works:
+    // Schema::dropIfExists('table');
 
     php artisan migrate:status
 
@@ -29,5 +29,22 @@ https://laravel.su/docs/8.x/migrations#rolling-back-migrations
     php artisan migrate
 
 ---
+
+Тестовый контроллер. Не имеет связи с моделью.
+
+    php artisan make:controller RestTestController --resource
+
+Ресурсный контроллер. Имеет связь с моделью.
+
+    php artisan make:controller ProductsController --model=Product
+
+Ресурсным его делает запись --model= согласно 
+
+    php artisan make:controller --help
+
+
+
+
+
 
 
