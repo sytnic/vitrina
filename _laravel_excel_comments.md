@@ -105,16 +105,40 @@ https://2domains.ru/support/hosting/nastroyka-git-na-khostinge
 4. Чтобы загружать файлы на хостинг в будущем, используйте команду 
 ```
     git pull 
-```    
+```
+
+https://www.atlassian.com/ru/git/tutorials/syncing/git-pull
+
+    git pull origin master
+    
 Она позволит синхронизировать файлы хостинга с файлами репозитория.
 
 Готово, вы опубликовали файлы на хостинге.
 
 ---
 
+## Группа директив под авторизованного пользователя
 
+```
+@if (Route::has('login'))
+                
+        @auth  {{-- Уже авторизован --}}
 
+            <a >Home</a>
 
+        @else  {{-- Иначе (Не авторизован) --}}
+
+            <a >Log in</a>
+
+            @if (Route::has('register'))
+
+                <a >Register</a>
+            
+            @endif
+
+        @endauth                
+@endif
+```
 
 
 
