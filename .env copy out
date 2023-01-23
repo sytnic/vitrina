@@ -1,4 +1,4 @@
-APP_NAME=Showcase
+APP_NAME=Case
 APP_ENV=local
 APP_KEY=base64:qKYlbVO/+SeOO0fAFXOR4L4TcuMVuaVQCTQvyHVz6Nw=
 APP_DEBUG=true

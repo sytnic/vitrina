@@ -5,6 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
 
+        @if (session('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif 
+
         <table class="table">
             <thead>
                 <tr>
@@ -93,13 +99,13 @@
                         alt="Edit"
                         title="Edit">
                       Edit</a>
-<!-- 
-                   <form action="{{-- action('BookingController@destroy', ['booking' => $booking->id ]  ) --}}" method="POST">
+
+                   <form action="{{ action('App\Http\Controllers\ProductsController@destroy', ['product' => $product->id ]  ) }}" method="POST">
                         @method('DELETE')
                         @csrf 
                         <button type="submit" class="btn btn-link" title="Delete" value="DELETE" >Delete</button>
                     </form>
---> 
+ 
                 </td>
             </tr>
         @empty

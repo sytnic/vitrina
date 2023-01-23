@@ -58,3 +58,5 @@ Route::get('/products/table', function () {
 // Route::get('/products/table', 'ProductsController@table')->name('tableProducts');
 Route::get('/products/table', [ProductsController::class, 'table'])->name('tableProducts');
 
+Route::delete('/products/{product}', 'App\Http\Controllers\ProductsController@destroy')->name('products.destroy');
+
