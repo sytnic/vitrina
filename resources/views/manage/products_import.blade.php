@@ -47,10 +47,9 @@
 
 <br>
             <div class="mb-3">
-                <p>Перейти к отображению в виде:</p>
-                <a class="" href="/products/table">Таблица</a>
-                &nbsp;&nbsp;&nbsp;
-                <a class="text-muted" href="##">Витрина</a>
+                <p>Перейти к отображению в виде:</p>                
+                <p><a class="" href="/products/table">Таблица</a> (admin zone)<p>                
+                <p><a class="text-muted" href="/products" target="_blank">Витрина</a> (public zone)</p>
             </div>  
 
             <hr>

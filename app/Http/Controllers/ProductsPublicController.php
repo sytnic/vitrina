@@ -16,7 +16,7 @@ class ProductsPublicController extends Controller
     {
         //DB::table('products')->get()->dd();
 
-        $products = Product::paginate(9);
+        $products = Product::paginate(18);
 
         //dd($products);
 
