@@ -60,3 +60,5 @@ Route::get('/products/table', [ProductsController::class, 'table'])->name('table
 
 Route::delete('/products/{product}', 'App\Http\Controllers\ProductsController@destroy')->name('products.destroy');
 
+Route::get('/products', 'App\Http\Controllers\ProductsPublicController@index')->name('products.index');
+

@@ -10,7 +10,15 @@
 
 ## Запуск
 
+### Первый запуск
+
+    docker-compose build    
+
+### Не первый запуск
+
     docker-compose up -d
+    # или
+    docker-compose start
 
 > Проверка в браузере
 
@@ -22,6 +30,19 @@
     db, root, 123
     // на основе docker-compose.yml
 
+## Log in to the docker container
+
+Вход в контейнер (не работает в GitBash, работает в cmd)
+
+    cd /d E:\
+    cd develop_train\dockerphp\my_folder
+    dir
+    docker ps
+    docker exec -it container_id bash
+
+    // при необходимости
+    apt-get install nano
+
 ## Остановка контейнеров
 
-     docker-compose stop
+    docker-compose stop

@@ -4,22 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class ProductsController extends Controller
+class ProductsPublicController extends Controller
 {
-    /**
-     * Запрет без авторизации )) , man
-     * 
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -27,39 +14,14 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
-    }
+        //DB::table('products')->get()->dd();
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function table()
-    {
-        // DB::table('products')->get()->dd();
-        // $bookings = Product::all()->dd();
+        $products = Product::paginate(9);
 
-        // Все
-        // $products = Product::all();
+        //dd($products);
 
-        // С пагинацией
-        $products = Product::paginate(20);
-
-        // вью с with
-        return view('manage.products_table') 
-            ->with('products', $products)
-            // ->with('another', $another)
-            ;
-        
-        /* // вью с массивом
-        return view('manage.products_table', 
-            [            
-             'products' => $products,
-             // 'another' => $another,
-            ]
-        );
-        */
+        return view('products.index')
+            ->with('products', $products);
     }
 
     /**
@@ -125,9 +87,6 @@ class ProductsController extends Controller
      */
     public function destroy(Product $product)
     {
-        DB::table('products')->where('id', $product->id)->delete();
-       
-        //return redirect()->action('ProductsController@table');
-        return back()->with(['success' => "Позиция {$product->id} удалена."]);
+        //
     }
 }

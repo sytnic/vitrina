@@ -1,4 +1,20 @@
-## Beyond the code
+# Beyond the code
+
+## Log in to the docker container
+
+Вход в контейнер (не работает в GitBash, работает в cmd)
+
+    cd /d E:\
+    cd develop_train\dockerphp\my_folder
+    dir
+    docker ps
+    docker exec -it container_id bash
+
+    // при необходимости
+    apt-get install nano
+
+
+## Creating controllers, models
 
 https://docs.laravel-excel.com/3.1/imports/
 
@@ -44,7 +60,7 @@ https://laravel.su/docs/8.x/migrations#rolling-back-migrations
 
 ---
 
-Перед выкладыванием: 
+## Перед выкладыванием: 
 
 https://itproger.com/course/laravel/8  
 https://www.youtube.com/watch?v=d-99IlvUuJw
