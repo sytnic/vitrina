@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app_dashboard')
 
 @section('content')
+
 <div class="container" >
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -11,7 +12,9 @@
             </div>
         @endif 
 
-        <table class="table">
+        <h3>Products Table</h3>
+        <div class="table-responsive">
+        <table class="table table-striped">
             <thead>
                 <tr>
                 <th scope="col">#</th>
@@ -112,7 +115,9 @@
         @endforelse
               
             </tbody>
-        </table>    
+        </table>
+        </div> <!-- "table-responsive" --> 
+
         <!-- Pagination -->        
         {{ $products->links() }}
         </div>

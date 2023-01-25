@@ -1,5 +1,5 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-    <div class="position-sticky pt-3 sidebar-sticky">
+  <div class="position-sticky pt-3 sidebar-sticky">
     <ul class="nav flex-column">
 
         <li class="nav-item">
@@ -15,7 +15,7 @@
         </a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/products/table">
             <span data-feather="file-text" class="align-text-bottom"></span>
             Products Table
         </a>
@@ -31,12 +31,11 @@
 
     <ul class="nav flex-column mb-2">          
         <li class="nav-item">
-        <a class="nav-link" href="#">
-            <span data-feather="file-text" class="align-text-bottom"></span>
+        <a class="nav-link" href="/products" target="_blank">
+            <span data-feather="camera" class="align-text-bottom"></span>
             Products Vitrina
         </a>
         </li>
     </ul>
-
-    </div>
+  </div>
 </nav>
