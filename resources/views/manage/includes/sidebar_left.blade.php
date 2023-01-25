@@ -3,13 +3,13 @@
     <ul class="nav flex-column">
 
         <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">
+        <a class="nav-link active" aria-current="page" href="/home">
             <span data-feather="home" class="align-text-bottom"></span>
-            Dashboard
+            Home
         </a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/products/import">
             <span data-feather="shopping-cart" class="align-text-bottom"></span>
             Products Import
         </a>

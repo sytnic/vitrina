@@ -122,7 +122,12 @@
 </header>
 
 <div class="container-fluid">
-@yield('content')
+  <div class="row">
+  @include('manage.includes.sidebar_left')
+
+  @yield('content')
+  
+  </div>
 </div>
 
 <!--  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>  -->
