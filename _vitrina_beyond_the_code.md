@@ -156,6 +156,29 @@ https://www.atlassian.com/ru/git/tutorials/syncing/git-pull
 @endif
 ```
 
+## Если есть проблемы с правами или доступом к файлам
+
+    // проверить права и отдать всё пользователю www-data  
+    ls -la    
+    chown -R www-data:www-data /var/www/html *
+    # или находясь в папке:
+    chown -R www-data:www-data *
+
+    // при необходимости
+    apt-get install nano
+    nano my_file
+
+## Если Laravel не реагирует на изменения
+
+Если в проект, окружение вводились глобальные изменения, и теперь Laravel не реагирует на изменения в файле .env, например, то помогут:
+
+    php artisan config:cache
+    php artisan config:clear
+
+---
+
+
+
 
 
 

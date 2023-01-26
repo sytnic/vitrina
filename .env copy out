@@ -1,5 +1,5 @@
 APP_NAME=Case
-APP_ENV=local
+APP_ENV=production
 APP_KEY=base64:qKYlbVO/+SeOO0fAFXOR4L4TcuMVuaVQCTQvyHVz6Nw=
 APP_DEBUG=false
 APP_URL=https://case.sytnic.ru
